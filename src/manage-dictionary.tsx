@@ -15,7 +15,7 @@ function AddWordForm({ onAdd }: { onAdd: () => void }) {
         }
         onAdd();
         pop();
-        await showToast({ style: Toast.Style.Success, title: `Added "${word}" to dictionary` });
+        await showToast({ style: Toast.Style.Success, title: `Added '${word}' to dictionary` });
       } catch (err) {
         await showToast({ style: Toast.Style.Failure, title: "Failed to update dictionary",
           message: err instanceof Error ? err.message : String(err) });
