@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync } from "fs";
+import { readFileSync, renameSync, writeFileSync } from "fs";
 import { SETTINGS_PATH } from "./constants";
 
 export interface HandySettings {
@@ -24,6 +24,10 @@ export function writeSettings(
   const raw = readFileSync(filePath, "utf-8");
   const store = JSON.parse(raw) as SettingsStore;
   store.settings = { ...store.settings, ...update };
-  // tauri-plugin-store writes compact JSON; we match that format to avoid noisy diffs
-  writeFileSync(filePath, JSON.stringify(store), "utf-8");
+  // Write to a sibling temp file then rename — rename(2) is atomic on macOS/Linux,
+  // preventing corruption of Handy's tauri-plugin-store on mid-write interruption.
+  // tauri-plugin-store writes compact JSON; we match that format to avoid noisy diffs.
+  const tmp = filePath + ".raycast-tmp";
+  writeFileSync(tmp, JSON.stringify(store), "utf-8");
+  renameSync(tmp, filePath);
 }
