@@ -83,14 +83,14 @@
   "dependencies": {
     "@raycast/api": "^1.104.9",
     "@raycast/utils": "^2.2.3",
-    "better-sqlite3": "^11.9.1",
     "execa": "^9.5.2"
   },
   "devDependencies": {
     "@raycast/eslint-config": "^1.0.11",
-    "@types/better-sqlite3": "^7.6.12",
+    "@types/better-sqlite3": "^7.6.13",
     "@types/node": "^20.8.10",
     "@types/react": "^19.2.14",
+    "better-sqlite3": "^12.8.0",
     "eslint": "^8.57.0",
     "prettier": "^3.3.3",
     "typescript": "^5.4.5",
@@ -104,8 +104,5 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "publish": "npx @raycast/api@latest publish"
-  },
-  "external": [
-    "better-sqlite3"
-  ]
+  }
 }
