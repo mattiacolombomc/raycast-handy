@@ -19,14 +19,14 @@
     }
   ],
   "commands": [
-    { "name": "search-transcripts",     "title": "Search Transcripts",    "subtitle": "Handy", "description": "Browse and copy transcription history",             "mode": "view" },
-    { "name": "manage-dictionary",      "title": "Manage Dictionary",     "subtitle": "Handy", "description": "Add and remove custom words",                      "mode": "view" },
-    { "name": "add-dictionary-word",    "title": "Add Dictionary Word",   "subtitle": "Handy", "description": "Quickly add a word to the custom dictionary",      "mode": "view" },
-    { "name": "select-model",           "title": "Select Model",          "subtitle": "Handy", "description": "Switch the active transcription model",            "mode": "view" },
     { "name": "start-recording",        "title": "Start Recording",       "subtitle": "Handy", "description": "Start transcription recording",                   "mode": "no-view" },
     { "name": "stop-recording",         "title": "Stop Recording",        "subtitle": "Handy", "description": "Stop transcription recording",                    "mode": "no-view" },
     { "name": "copy-last-transcript",   "title": "Copy Last Transcript",  "subtitle": "Handy", "description": "Copy the most recent transcription to clipboard", "mode": "no-view" },
-    { "name": "open-recordings-folder", "title": "Open Recordings Folder","subtitle": "Handy", "description": "Open the recordings directory in Finder",         "mode": "no-view" }
+    { "name": "add-dictionary-word",    "title": "Add Dictionary Word",   "subtitle": "Handy", "description": "Quickly add a word to the custom dictionary",      "mode": "view" },
+    { "name": "manage-dictionary",      "title": "Manage Dictionary",     "subtitle": "Handy", "description": "Add and remove custom words",                      "mode": "view" },
+    { "name": "select-model",           "title": "Select Model",          "subtitle": "Handy", "description": "Switch the active transcription model",            "mode": "view" },
+    { "name": "open-recordings-folder", "title": "Open Recordings Folder","subtitle": "Handy", "description": "Open the recordings directory in Finder",         "mode": "no-view" },
+    { "name": "search-transcripts",     "title": "Search Transcripts",    "subtitle": "Handy", "description": "Browse and copy transcription history",             "mode": "view" }
   ],
   "dependencies": {
     "@raycast/api": "^1.93.2",
