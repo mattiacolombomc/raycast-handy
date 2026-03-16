@@ -3,3 +3,4 @@ dist/
 .eslintcache
 *.js.map
 raycast-env.d.ts
+.DS_Store
