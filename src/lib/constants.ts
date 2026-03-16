@@ -5,7 +5,7 @@ const HANDY_SUPPORT_DIR = join(
   homedir(),
   "Library",
   "Application Support",
-  "com.pais.handy"
+  "com.pais.handy",
 );
 
 export const DB_PATH = join(HANDY_SUPPORT_DIR, "history.db");

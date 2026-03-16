@@ -19,7 +19,7 @@ export function readSettings(filePath: string = SETTINGS_PATH): HandySettings {
 
 export function writeSettings(
   update: Partial<HandySettings>,
-  filePath: string = SETTINGS_PATH
+  filePath: string = SETTINGS_PATH,
 ): void {
   const raw = readFileSync(filePath, "utf-8");
   const store = JSON.parse(raw) as SettingsStore;

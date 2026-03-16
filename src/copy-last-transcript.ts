@@ -4,7 +4,10 @@ import { displayText, getLatestEntry } from "./lib/db";
 export default async function main() {
   try {
     const entry = getLatestEntry();
-    if (!entry) { await showHUD("No transcriptions yet"); return; }
+    if (!entry) {
+      await showHUD("No transcriptions yet");
+      return;
+    }
     const text = displayText(entry);
     await Clipboard.copy(text);
     const preview = text.length > 40 ? `${text.slice(0, 40)}…` : text;

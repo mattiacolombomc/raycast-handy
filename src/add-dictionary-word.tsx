@@ -12,22 +12,38 @@ export default function AddDictionaryWord() {
           writeSettings({ custom_words: [...s.custom_words, word] });
         }
         reset();
-        await showToast({ style: Toast.Style.Success, title: `Added '${word}' to dictionary` });
+        await showToast({
+          style: Toast.Style.Success,
+          title: `Added '${word}' to dictionary`,
+        });
       } catch (err) {
-        await showToast({ style: Toast.Style.Failure, title: "Failed to update dictionary",
-          message: err instanceof Error ? err.message : String(err) });
+        await showToast({
+          style: Toast.Style.Failure,
+          title: "Failed to update dictionary",
+          message: err instanceof Error ? err.message : String(err),
+        });
       }
     },
     validation: {
-      word: (v) => (!v || v.trim().length === 0) ? "Word cannot be empty" : undefined,
+      word: (v) =>
+        !v || v.trim().length === 0 ? "Word cannot be empty" : undefined,
     },
   });
 
   return (
-    <Form actions={<ActionPanel><Action.SubmitForm title="Add Word" onSubmit={handleSubmit} /></ActionPanel>}>
-      <Form.TextField title="Word" placeholder="e.g. TypeScript"
+    <Form
+      actions={
+        <ActionPanel>
+          <Action.SubmitForm title="Add Word" onSubmit={handleSubmit} />
+        </ActionPanel>
+      }
+    >
+      <Form.TextField
+        title="Word"
+        placeholder="e.g. TypeScript"
         info="Added to Handy's custom dictionary for better recognition"
-        {...itemProps.word} />
+        {...itemProps.word}
+      />
     </Form>
   );
 }

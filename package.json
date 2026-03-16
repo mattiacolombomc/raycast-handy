@@ -4,7 +4,7 @@
   "title": "Handy",
   "description": "Control Handy speech-to-text: transcription history, dictionary, model selection, and recording",
   "icon": "handy.png",
-  "author": "mattiacolombo",
+  "author": "mattiacolombomc",
   "license": "MIT",
   "platforms": [
     "macOS"
