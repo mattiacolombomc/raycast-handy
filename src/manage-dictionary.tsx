@@ -75,7 +75,7 @@ export default function ManageDictionary() {
               <ActionPanel>
                 {addAction}
                 <Action title="Delete Word" icon={Icon.Trash} style={Action.Style.Destructive}
-                  shortcut={{ modifiers: ["cmd"], key: "delete" }}
+                  shortcut={{ modifiers: ["ctrl"], key: "x" }}
                   onAction={() => handleDelete(word)} />
               </ActionPanel>
             } />
