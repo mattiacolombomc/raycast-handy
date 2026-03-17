@@ -9,7 +9,10 @@ export default function AddDictionaryWord() {
       try {
         const s = readSettings();
         if (s.custom_words.includes(word)) {
-          await showToast({ style: Toast.Style.Failure, title: `'${word}' is already in dictionary` });
+          await showToast({
+            style: Toast.Style.Failure,
+            title: `'${word}' is already in dictionary`,
+          });
           return;
         }
         writeSettings({ custom_words: [...s.custom_words, word] });
