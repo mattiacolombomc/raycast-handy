@@ -16,8 +16,8 @@ export function readSettings(filePath: string = SETTINGS_PATH): HandySettings {
   const raw = readFileSync(filePath, "utf-8");
   const store = JSON.parse(raw) as SettingsStore;
   return {
-    selected_language: "auto",
     ...store.settings,
+    selected_language: store.settings.selected_language ?? "auto",
   };
 }
 
