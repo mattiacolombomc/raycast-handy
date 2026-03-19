@@ -115,7 +115,11 @@ const ALL_LANGUAGES: LanguageOption[] = Object.entries(LANGUAGE_MAP)
   .filter(([code]) => code !== "auto")
   .map(([code, { label, native }]) => ({ code, label, native }));
 
-const AUTO_OPTION: LanguageOption = { code: "auto", label: "Auto (detect)", native: "Auto (detect)" };
+const AUTO_OPTION: LanguageOption = {
+  code: "auto",
+  label: "Auto (detect)",
+  native: "Auto (detect)",
+};
 
 /**
  * Returns languages available for a model.
@@ -124,7 +128,9 @@ const AUTO_OPTION: LanguageOption = { code: "auto", label: "Auto (detect)", nati
  * - supportedLanguages === ["en", …] → filtered list
  * Always prepends the "auto" option.
  */
-export function getLanguagesForModel(supportedLanguages?: string[]): LanguageOption[] {
+export function getLanguagesForModel(
+  supportedLanguages?: string[],
+): LanguageOption[] {
   const filtered = supportedLanguages
     ? ALL_LANGUAGES.filter(({ code }) => supportedLanguages.includes(code))
     : ALL_LANGUAGES;

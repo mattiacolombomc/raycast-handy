@@ -55,7 +55,10 @@ export default function SelectLanguage() {
     try {
       writeSettings({ selected_language: lang.code });
       setCurrentCode(lang.code);
-      const display = lang.code === "auto" ? "Auto (detect)" : `${lang.native} · ${lang.label}`;
+      const display =
+        lang.code === "auto"
+          ? "Auto (detect)"
+          : `${lang.native} · ${lang.label}`;
       await showHUD(`Language set to ${display}`);
     } catch (err) {
       await showToast({
@@ -74,7 +77,11 @@ export default function SelectLanguage() {
         languages.map((lang) => (
           <List.Item
             key={lang.code}
-            title={lang.code === "auto" ? "Auto (detect)" : `${lang.native} · ${lang.label}`}
+            title={
+              lang.code === "auto"
+                ? "Auto (detect)"
+                : `${lang.native} · ${lang.label}`
+            }
             accessories={
               lang.code === currentCode
                 ? [{ text: "Active", icon: Icon.Checkmark }]
