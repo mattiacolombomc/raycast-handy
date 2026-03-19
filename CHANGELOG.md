@@ -8,7 +8,7 @@
 ### Changed
 - Updated screenshots
 
-## [1.0.0] - {PR_MERGE_DATE}
+## [Initial Release] - 2026-03-19
 
 ### Added
 - **Search Transcripts** — browse full transcription history with detail pane, copy to clipboard, toggle saved, delete, and reveal recording in Finder
